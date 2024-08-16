@@ -1,9 +1,28 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./Roboto-Regular.ttf') format('truetype');
+}
+
+:root{
+  font-family: 'Roboto';
+}
+
+
+body{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+margin:0;
+height: 100vh;
+}
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  max-width: 50vw;
 }
 
 .search-section {
@@ -13,14 +32,18 @@
   gap: 10px;
 }
 
+
 button {
   background-color: lightgrey;
   border: 1px solid black;
   border-radius: 2px;
+  font-family: 'Roboto';
+  border: 1px solid black;
+  border-radius: 8px;
 }
 
 .active {
-  background-color: grey;
+  border: 2px solid black
 }
 
 .weather-card {
@@ -30,17 +53,20 @@ button {
   align-items: center;
   border: 2px solid black;
   border-radius: 6px;
-  max-width: 50vw;
+  width: 100%;
+  min-height: 50%;
   padding: 20px;
   gap: 15px;
+  background-color: #73BCDD;
+  color: white;
 }
 
-.weather-header {
+.weather-content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: 30px;
 }
 
 .weather-footer {
@@ -49,4 +75,30 @@ button {
   justify-content: space-between;
   align-items: center;
   gap: 15px;
+}
+
+footer {
+  display: flex;
+  border-top: var(--header-footer-border);
+  height: 6vh;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  grid-area: end / start / end / end;
+  background-color: var(--timberwolf);
+  padding: 5px;
+}
+
+.github-logo {
+  font-size: 3rem;
+  margin-left: 1rem;
+  transition: transform 1s;
+}
+
+a {
+  color: inherit;
+}
+
+.github-logo:hover {
+  transform: rotate(1turn);
 }
