@@ -10,10 +10,14 @@ const UIController = (() => {
   const degreeBtnF = document.getElementById("°F");
   const degreeBtnC = document.getElementById("°C");
   degreeBtnF.addEventListener("click", (e) => {
-    handleDegreeBtnClick(degreeBtnF, degreeBtnC, e.target.id, weatherData);
+    if (degrees !== "°F") {
+      handleDegreeBtnClick(degreeBtnF, degreeBtnC, e.target.id, weatherData);
+    }
   });
   degreeBtnC.addEventListener("click", (e) => {
-    handleDegreeBtnClick(degreeBtnC, degreeBtnF, e.target.id, weatherData);
+    if (degrees !== "°C") {
+      handleDegreeBtnClick(degreeBtnC, degreeBtnF, e.target.id, weatherData);
+    }
   });
 
   const handleDegreeBtnClick = (btn1, btn2, id, weatherData) => {
